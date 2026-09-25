@@ -23,6 +23,7 @@ Vercelへはリポジトリをインポートするだけで公開できます(F
 | `app/page.tsx` | LP本体(全セクション) |
 | `app/page.module.css` | LPのスタイル |
 | `app/Faq.tsx` / `app/Faq.module.css` | FAQアコーディオン |
+| `app/StaffSlider.tsx` / `app/StaffSlider.module.css` | スタッフ紹介スライダー(embla-carousel:ループ・自動再生・スワイプ・ドット) |
 | `app/cta.ts` | CTAリンク先URL・SNS URL |
 | `public/images/` | デザインから切り出した写真・イラスト素材 |
 
@@ -43,6 +44,9 @@ Vercelへはリポジトリをインポートするだけで公開できます(F
 | `paint-event`(塗装体験予約) | `…?uLand=Z9vBMh` | `hero` / `event` / `footer` |
 
 ## 補足
+
+- スタッフ紹介のカード画像・枝のイラストは前回LP(papamama-kobe2)の素材を流用しています(`public/images/staff/`)。
+  スタッフの追加・並び替えは `app/StaffSlider.tsx` の `STAFF` 配列で行えます。
 
 - 写真・イラストはデザインカンプから切り出したもの(カンプ解像度 587px幅)です。
   高解像度の元素材があれば `public/images/` の同名ファイルを差し替えるだけで反映できます。

@@ -1,0 +1,67 @@
+.viewport {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  backface-visibility: hidden;
+}
+
+.slide {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: block;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ドット: 見た目は直径12px(カンプ)、タップ領域は36px */
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.dot {
+  position: relative;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: -0.6rem 0 0 -0.6rem;
+  border-radius: 50%;
+  background: #497006;
+  transition: background-color 0.2s;
+}
+
+.dotActive::after {
+  background: #fff;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -0.6rem;
+  border-radius: 50%;
+}

@@ -1,6 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 import Faq from "./Faq";
+import StaffSlider from "./StaffSlider";
 import { CTA_URL, SNS, type CtaKind } from "./cta";
 import s from "./page.module.css";
 
@@ -26,7 +27,7 @@ import imgIcPin from "@/public/images/ic-pin.png";
 import imgIcMt from "@/public/images/ic-mt.png";
 import imgIcTent from "@/public/images/ic-tent.png";
 import imgIcLike from "@/public/images/ic-like.png";
-import imgStaff from "@/public/images/staff.jpg";
+import imgBranch from "@/public/images/staff/branch.png";
 import imgExterior from "@/public/images/exterior-bg.jpg";
 import imgSpecial from "@/public/images/special.jpg";
 import imgLogo from "@/public/images/logo.png";
@@ -635,10 +636,11 @@ function About() {
 }
 
 /* ---------------------------------------------------------------- STAFF */
+const BRANCH_TOP = 10527;
+
 function Staff() {
   const T = 10285;
   const p = place(T);
-  const dark = { color: "#281810" };
   return (
     <section className={s.sec} style={{ height: r(11482 - T), background: "var(--c-staff)" }}>
       <SectionTitle secTop={T} capTop={10401} fs={100} color="#fff" dx={1} ls={-0.02}>
@@ -647,35 +649,12 @@ function Staff() {
       <p className={`${s.center} ${s.sub}`} style={{ ...text(T, { cy: 10502, fs: 21, lh: 30, ls: 0.05 }), paddingLeft: "0.05em", color: "#e8f0e0" }}>
         スタッフ紹介
       </p>
-      <Pic src={imgStaff} alt="スタッフ 森行 啓太" style={p({ x: 0, y: 10530, w: 587, h: 706 })} />
-      <div className={s.plate} style={{ ...p({ x: 144, y: 10989, w: 322, h: 75 }), fontSize: r(25), lineHeight: r(29), letterSpacing: "0.15em", paddingLeft: "0.15em" }}>
-        <p>森行 啓太</p>
-        <p>モリユキ ケイタ</p>
+      {/* 枝のイラスト(カードの紐が枝の下に隠れるようスライダーより前面) */}
+      <div className={s.abs} style={{ ...p({ x: 0, y: BRANCH_TOP, w: 587, h: 129.3 }), zIndex: 1 }}>
+        <Image src={imgBranch} alt="" className={s.img} sizes="(max-width: 480px) 100vw, 480px" />
       </div>
-      {[
-        { y: 11077, l: "趣味" },
-        { y: 11129, l: "特技" },
-        { y: 11161, l: "一言" },
-      ].map((b) => (
-        <span key={b.l} className={s.badge} style={{ ...p({ x: 120, y: b.y, w: 55, h: 27 }), fontSize: r(14) }}>
-          {b.l}
-        </span>
-      ))}
-      {[
-        { cy: 11089, t: "キャンプ、サップ、サッカー、" },
-        { cy: 11116, t: "スノボー、ダイビング" },
-        { cy: 11143, t: "お客様を笑顔にできる！" },
-        { cy: 11173, t: "お客様にとって最高の１台をご" },
-        { cy: 11200, t: "提案します！" },
-      ].map((l) => (
-        <p key={l.cy} className={`${s.abs} ${s.bold} ${s.nowrap}`} style={{ ...text(T, { x: 180, cy: l.cy, fs: 21, lh: 28, ls: 0.03 }), ...dark }}>
-          {l.t}
-        </p>
-      ))}
-      <div aria-hidden="true">
-        {[223, 259, 295, 331, 367].map((cx, i) => (
-          <span key={cx} className={`${s.dot} ${i === 2 ? s.dotActive : ""}`} style={p({ x: cx - 6, y: 11295, w: 12, h: 12 })} />
-        ))}
+      <div className={s.abs} style={p({ x: 0, y: 10625, w: 587 })}>
+        <StaffSlider dotsTop={r(11301 - 10625)} />
       </div>
     </section>
   );
