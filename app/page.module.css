@@ -1,0 +1,330 @@
+.lp {
+  position: relative;
+  width: var(--lp-width);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--c-cream);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+.sec {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.abs {
+  position: absolute;
+}
+
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- 見出し(英字) ---------- */
+.title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: var(--font-title), "Arial Narrow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: 62%;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.sub {
+  font-weight: 300;
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.btnOrange {
+  background: var(--c-orange);
+}
+
+.btnLime {
+  background: var(--c-lime);
+}
+
+.tri {
+  position: absolute;
+  background: #000;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* ---------- HERO ---------- */
+.hero h1 {
+  font-weight: 900;
+}
+
+.heroGreen {
+  color: #305a2c;
+}
+
+.dark {
+  color: var(--c-ink);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.bar {
+  position: absolute;
+  background: var(--c-yellow);
+}
+
+.ticketBox {
+  position: absolute;
+  border: 0.2rem solid var(--c-green);
+  border-radius: 0.8rem;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--c-green);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------- WHAT WE CAN ---------- */
+.cardNum {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 400;
+  color: transparent;
+  -webkit-text-stroke: 0.15rem #fff;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cardLabel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- MERIT ---------- */
+.meritBox {
+  position: absolute;
+  background: #8ea185;
+  color: #fff;
+}
+
+.meritNum {
+  position: absolute;
+  font-family: var(--font-title), sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: 62%;
+  line-height: 1;
+}
+
+.hr {
+  position: absolute;
+}
+
+/* ---------- PAINT EVENT ---------- */
+.band {
+  position: absolute;
+  background: var(--c-orange);
+  clip-path: polygon(0 20.8%, 100% 0, 100% 79.2%, 0 100%);
+}
+
+.bandText {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.yBox {
+  position: absolute;
+  background: #ffdd4d;
+}
+
+.gBox {
+  position: absolute;
+  background: var(--c-lime);
+}
+
+.orange {
+  color: var(--c-orange);
+}
+
+/* ---------- ABOUT ---------- */
+.brown {
+  color: var(--c-brown);
+}
+
+.green {
+  color: var(--c-green);
+}
+
+.tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-green);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- STAFF ---------- */
+.plate {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  background: #231816;
+  color: #fff;
+  font-weight: 700;
+}
+
+.badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  background: #231816;
+  color: #fff;
+  font-weight: 700;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #497006;
+}
+
+.dotActive {
+  background: #fff;
+}
+
+/* ---------- EXTERIOR ---------- */
+.extNum {
+  position: absolute;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 0.15rem #e2e2e2;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.extLabel {
+  position: absolute;
+  font-family: var(--font-en), sans-serif;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.swatch {
+  position: absolute;
+  border-radius: 0.8rem;
+}
+
+.white {
+  color: #fff;
+}
+
+/* ---------- FLOW ---------- */
+.flowNum {
+  position: absolute;
+  font-family: var(--font-en), sans-serif;
+  font-weight: 800;
+  color: var(--c-orange);
+  line-height: 1;
+}
+
+/* ---------- FOOTER ---------- */
+.en {
+  font-family: var(--font-en), sans-serif;
+  font-weight: 700;
+}
+
+.goBox {
+  position: absolute;
+  background: var(--c-lime);
+  color: #000;
+}
+
+.day {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+}
+
+.snsLink {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+}
+
+.snsLink:hover {
+  opacity: 0.8;
+}

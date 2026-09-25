@@ -1,0 +1,87 @@
+/*
+ * デザインカンプ(GOOUTCAMP2026.jpg)は幅587pxで作られている。
+ * 1rem = カンプ上の10px となるようにルートのフォントサイズを
+ * LP幅(最大480px)に比例させ、どの画面幅でもカンプと同じ比率で表示する。
+ */
+:root {
+  --lp-width: min(100vw, 480px);
+  --c-cream: #fefcef;
+  --c-yellow: #f9ca46;
+  --c-orange: #ff6b01;
+  --c-lime: #9bcc00;
+  --c-green: #4b7007;
+  --c-forest: #4c673a;
+  --c-staff: #689129;
+  --c-brown: #8b4a1a;
+  --c-ink: #231815;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(var(--lp-width) * 10 / 587);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #3d5530;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(155, 204, 0, 0.12) 0, transparent 38%),
+    radial-gradient(circle at 80% 85%, rgba(249, 202, 70, 0.1) 0, transparent 40%);
+  background-attachment: fixed;
+  color: var(--c-ink);
+  font-family: var(--font-jp), "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
